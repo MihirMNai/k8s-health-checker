@@ -1,0 +1,63 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "k8s-health-checker"
+version = "1.0.0"
+description = "A powerful CLI tool to scan Kubernetes clusters for health issues, misconfigurations, and security risks."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [
+    {name = "Sanjay S", email = "sanjaysundarmurthy@gmail.com"},
+]
+keywords = ["kubernetes", "k8s", "health", "devops", "cli", "monitoring", "sre"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: System :: Monitoring",
+    "Topic :: System :: Systems Administration",
+]
+dependencies = [
+    "click>=8.1.0",
+    "rich>=13.0.0",
+    "kubernetes>=28.1.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.4.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/SanjaySundarMurthy/k8s-health-checker"
+Repository = "https://github.com/SanjaySundarMurthy/k8s-health-checker"
+Issues = "https://github.com/SanjaySundarMurthy/k8s-health-checker/issues"
+Documentation = "https://github.com/SanjaySundarMurthy/k8s-health-checker#readme"
+
+[project.scripts]
+k8s-health = "k8s_health_checker.cli:cli"
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
