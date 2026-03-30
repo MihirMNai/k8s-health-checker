@@ -1,5 +1,8 @@
-﻿# 🏥 k8s-health-checker
+﻿# 🏥 K8s Health Checker
 
+<img width="2752" height="1536" alt="unnamed (19)" src="https://github.com/user-attachments/assets/6df9ac06-9350-4709-a559-275250e3e793" />
+
+---
 ![PyPI](https://img.shields.io/pypi/v/k8s-health-checker.svg) ![Python](https://img.shields.io/pypi/pyversions/k8s-health-checker) ![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg) ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
 **A powerful CLI tool to scan Kubernetes clusters for health issues, misconfigurations, and security risks.**
